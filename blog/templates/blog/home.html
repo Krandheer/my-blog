@@ -1,0 +1,26 @@
+<head>
+	{% extends 'blog/base.html' %}
+</head>
+
+<!-- this will list some limited post on homepage -->
+<body>
+		{% block content %}
+			<div class="row" style="background-color: white;font-size: 16px; margin-bottom:0px; padding: 5px">
+		
+				<div class="col s12, m12, l8 left">
+				{% for post in posts %}
+					<a href="{{post.get_absolute_url}}"><h3 style="color: black" class="hover-item">{{post.title}}</h3></a>
+					<p>{{post.published_date}}</p>
+					<p>{{post.content|safe|linebreaks|truncatewords:80}}<a href="{%url 'blog:post_detail' post.slug %}" class="btn-small" style="background-color: #ffa500; color:#ffffff">read more</a></p>
+					<hr>
+					<br>
+				{% endfor %}
+				</div>
+
+			</div>
+
+		{% endblock %}
+		
+
+	
+</body>

@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+	
+<!-- this will show the detail of clicked post on homepage or blog page -->
+{% block content %}
+	
+	<div class="row" id="post-detail">		
+		<div class="col s12, m12, l12 left">
+			<h1>{{post.title}}</h1>
+			<p>{{post.published_date}}</p>
+			<p>{{post.content |safe |linebreaks}}</p>			
+			
+			<hr>
+		</div>
+	</div>
+
+{% endblock content %}

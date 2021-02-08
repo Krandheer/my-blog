@@ -1,0 +1,113 @@
+{% load static %}
+<html>
+    <head>
+
+
+        <title></title>
+
+        <link href='{% static "tinymce/css/prism.css" %}' rel="stylesheet">
+        
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src='{% static "tinymce/js/prism.js" %}'></script>
+
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    </head>
+    <body >
+        <!-- background="https://homepages.cae.wisc.edu/~ece533/images/goldhill.png" style="background-repeat: no-repeat; background-size: cover" -->
+
+        <div class="header">            
+            <!-- navbar start -->
+            <div class="navbar-fixed">
+                <nav class="teal darken-3">
+                    <div class="nav-wrapper container fixed-top">
+                        <a href="http://127.0.0.1:8000" class="brand-logo">Welcome</a>
+
+                        <a href="#" data-target="slide-out" class="sidenav-trigger">
+                            <i class="material-icons">menu</i>
+                        </a>
+
+                        <ul id="mobile-nav" class="right hide-on-med-and-down">
+                            <li>
+                                <form role="search" method="GET" action="/s/">
+                                    <div class="input-field">
+                                        <input id="search" name="q" type="search"
+                                        placeholder="search"
+                                        class="teal darken-3"
+                                        style="font-size: 16px">
+                                        <label class="label-icon" for="search">
+                                            <i class="material-icons">search</i>
+                                        </label>
+                                        <i class="material-icons">close</i>
+                                    </div>
+                                </form>
+                            </li>
+                            <li><a href="http://127.0.0.1:8000/about/">About</a></li>
+                            <li><a href="http://127.0.0.1:8000/blog">Blog</a></li>
+                            <li><a href="http://127.0.0.1:8000/bookshelf/">Bookshelf</a></li>
+                            <li><a href="http://127.0.0.1:8000/contact/">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+        <!-- mobile navbar starts-->
+            <ul id="slide-out" class="sidenav">
+                <li><a href="http://127.0.0.1:8000/about/">About</a></li>
+                <li><a href="http://127.0.0.1:8000/blog">Blog</a></li>
+                <li><a href="http://127.0.0.1:8000/bookshelf/">Bookshelf</a></li>
+                <li><a href="http://127.0.0.1:8000/contact/">Contact</a></li>                
+            </ul>
+        <!-- navbar ends here -->
+        </div>
+        <!-- header ends here -->
+
+        <!-- main page content -->
+        <div class="main">
+             <!--other page renders starts here-->
+            <div class="container-fluid">
+                <div class="container">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        <!--other pages renders ends here -->
+        </div>
+
+        
+        <!-- footer starts here -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 m8 s12" id="left-footer-content">
+                        <h5> You reacheded the end of page!</h5>
+                        <p>Contact at: <a href="mailto:gautam.randheer.iitd@gmail.com"> gautam.randheer.iitd@gmail.com </a> </p>
+                        <p style="margin-top: 55px;">Copyright by Randheer. &copy; 2019. All rights reserved.</p>
+                    </div>
+                    <div class="col l6 m4 s12" id="footer-right-content">
+                        <h5>Follow on:</h5>
+                        <div style="margin-left: 35px;">
+                            <p><a href="">Facebook</a></p>
+                            <p><a href="">Instagram</a></p>
+                            <p><a href="">Twitter</a></p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+
+       
+
+        <!-- javascript mobile navbar collapsible -->
+        <script>
+            const slide_out = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(slide_out, {});
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<head>
+	{% extends 'blog/base.html' %}
+	
+	
+</head>
+<!-- this will show the detail of clicked post on homepage or blog page -->
+<body>
+	{% block content %}
+
+		<div class="container" style="background-color: white; margin-top: 80px">
+			<form method="POST" style="padding:12px">{% csrf_token %}
+				<h4 style="text-align: center;">Contact me here</h4>
+					{{ form.as_p }}
+				<button type="submit">send</button>
+			</form>
+		</div>
+		
+		
+	{% endblock %}
+
+	
+</body>

@@ -1,0 +1,76 @@
+body {
+	margin: 0px;
+	padding: 0px;
+  	position: relative;
+  	min-height: 100%;
+  	display: flex;
+  	flex-direction: column;
+
+}
+
+/*footer css starts here*/
+footer {
+	box-sizing: border-box;
+	background: #E8E8E8;
+	color: white;
+	padding: 20px, auto, 10px, auto;
+	margin-top: auto;
+	padding-bottom: -10px; 
+}
+#left-footer-content {
+	color: #000;
+}
+#left-footer-content a {
+	color: black;
+}
+#left-footer-content a:hover {
+	color: #ffa500;
+	transition-duration: 0.3s;
+}
+#footer-right-content {
+	color: #000;
+}
+#footer-right-content a {
+	color: black;
+
+}
+#footer-right-content a:hover {
+	color: #ffa500;
+	transition-duration: 0.3s;
+}
+/*footer css ends here*/
+
+/*about page css*/
+.image{
+	height: 300px;
+	width: 230px;
+	border-radius: 50%;
+	box-shadow:  2px 3px 3px;
+	padding: 0px;
+}
+.about{
+	margin-top: 50px;
+	padding: 0px
+}
+/*about page css ends*/
+
+/*post list css starts here*/
+#post-list a {
+	color: black;
+}
+#post-list a:hover {
+	color: rgb(34,84,73);
+	transition-duration: 0.3s;
+}
+
+/*post-detail css page*/
+#post-detail {
+	background-color: white; 
+	font-size: 16px; 
+	padding: 5px; 
+	margin-bottom: 0px;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}

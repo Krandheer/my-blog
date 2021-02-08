@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+
+
+		{% block content %}
+			<div class="row #ffebee red lighten-5" style=" padding: 5px; margin-bottom: 0px">
+			{%for post in post %}
+				<a href="{{post.get_absolute_url}}"><h2>{{post.title}}</h2></a>
+				<p>{{post.content |safe|linebreaks|truncatewords:40}}<a href="{{post.get_absolute_url}}">read more</a></p>
+			{% endfor %}
+
+		{% endblock %}

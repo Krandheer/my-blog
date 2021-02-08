@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+<head>
+</head>
+<!-- this will show the detail of clicked post on homepage or blog page -->
+<body>
+	{% block content %}
+		
+		<div class="row about" style="background-color: white; padding: 5px">
+			<div class="col s12 m6 l4 ">
+				<img class="image" style="" src = {% static "images/about.jpg" %} alt="hi" />
+			</div>
+			<div class="col s12 m6 l6">
+				<p>I'm a student. I consider myself an avid reader who loves to read books from which he can gain something useful and a travel enthusiast. <br>
+				My reading journey started in 10th class with the aim to improve my English and slowly I started enjoying it. Now, whenever I get time I love to read books and travel to some unknown place.<br> I have read more than 50 books ranging from fiction, non-fiction, self-help, motivational to biographies and autobiography. I got the inspiration of traveling from my mentor in 11th class. I have done some unplanned solo trip and have visited many other different places with friends.</p>
+			</div>
+
+		</div>
+
+	{% endblock %}
+	
+</body>
